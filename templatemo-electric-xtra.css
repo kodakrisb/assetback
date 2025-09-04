@@ -658,6 +658,12 @@ https://templatemo.com/tm-596-electric-xtra
             font-size: 1.1rem;
         }
 
+        .elementor-video,
+        .elementor-wrapper iframe {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
         .feature-list {
             list-style: none;
             margin-top: 20px;
