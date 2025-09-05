@@ -467,6 +467,34 @@ https://templatemo.com/tm-596-electric-xtra
             80% { clip-path: inset(40% 0 40% 0); transform: translate(1px); }
         }
 
+
+        .static-rating {
+            position: relative;
+            display: inline-block;
+            font-size: 24px; /* Adjust the size of the stars */
+            font-family: sans-serif; /* Fallback for unsupported fonts */
+        }
+          
+        .static-rating-background {
+            color: #ccc; /* Color for the empty stars */
+        }
+          
+        .static-rating-foreground {
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: gold; /* Color for the filled stars */
+            overflow: hidden;
+            /* This variable is used by the CSS below */
+            --rating: attr(data-rating);
+        }
+          
+        .static-rating-foreground {
+            width: calc(var(--rating) / 5 * 100%);
+            /* This sets the width based on the data-rating value */
+        }
+
+
         .subtitle {
             font-size: 1.5rem;
             margin: 20px 0;
@@ -722,6 +750,20 @@ https://templatemo.com/tm-596-electric-xtra
             justify-content: center;
         }
 
+        .trust-pilot {
+            display: flex;
+            justify-content: center; /* centers horizontally */
+            padding: 20px; /* optional */
+        }
+
+        .trust-pilot {
+            color: white;
+            background-color: white; /* optional dark background */
+            padding: 20px;          /* optional spacing */
+        }
+          
+        
+          
         .about-graphic {
             width: 300px;
             height: 300px;
@@ -877,6 +919,52 @@ https://templatemo.com/tm-596-electric-xtra
             font-family: 'Orbitron', monospace;
         }
 
+
+        .form-group select {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 94, 0, 0.3);
+            color: white;
+            font-size: 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-family: 'Rajdhani', sans-serif;
+            appearance: none;           /* removes default browser arrow */
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            cursor: pointer;            /* makes it feel clickable */
+        }
+        
+        /* Focus effect like inputs */
+        .form-group select:focus {
+            outline: none;
+            border-color: #FF5E00;
+            box-shadow: 0 0 20px rgba(255, 94, 0, 0.3);
+            background: rgba(255, 255, 255, 0.08);
+        }
+        
+        /* Style the dropdown options */
+        .form-group select option {
+            background: #1a1a1a;   /* dark dropdown background */
+            color: white;
+            padding: 10px;
+        }
+        
+        /* Optional: Add custom dropdown arrow */
+        .form-group {
+            position: relative;
+        }
+        
+        .form-group select {
+            background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            background-size: 15px;
+            padding-right: 40px; /* make space for arrow */
+        }
+
+        
         .submit-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 30px rgba(255, 94, 0, 0.5);
